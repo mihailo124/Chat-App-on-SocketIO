@@ -1,0 +1,90 @@
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  transition: 300ms;
+}
+
+.OuterWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 100vh;
+  height: 100%;
+  align-items: center;
+  background-color: #59bd95;
+}
+
+.InnerWrapper {
+  width: 200px;
+}
+
+.JoinInput {
+  border: 0;
+  padding: 15px 20px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 300;
+  outline: none;
+}
+
+.None {
+  display: none;
+}
+
+.JoinInput:focus {
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+.Header {
+  color: white;
+  font-size: 2.5em;
+margin: 11% 0;
+}
+
+.Button {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  width: 100%;
+  outline: 0;
+  color: #59bd95;
+  font-size: 1em;
+  border: 2px #fff solid;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.Button:hover {
+  background-color: #59bd95;
+  color: #fff;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+@media (max-width: 450px) {
+  .InnerWrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 350px) {
+  .InnerWrapper {
+    width: 90%;
+  }
+}

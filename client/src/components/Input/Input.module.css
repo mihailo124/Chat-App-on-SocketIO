@@ -1,0 +1,53 @@
+.Form {
+  display: flex;
+  border-top: 2px solid #d3d3d3;
+}
+
+.Input {
+  border: none;
+  border-radius: 0;
+  padding: 25px;
+  width: 80%;
+  font-size: 1.2em;
+  outline: none;
+  resize: none;
+  height: -webkit-fill-available;
+  overflow: hidden;
+  height: 20px;
+  border-bottom-left-radius: 8px;
+  box-sizing: content-box;
+}
+
+.Input textarea::placeholder {
+  margin-top: 0;
+}
+
+.Button {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #59bd95;
+  padding: 20px;
+  display: inline-block;
+  border: none;
+  width: 20%;
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  border-bottom-right-radius: 8px;
+}
+
+@media (max-width: 400px) {
+  .Button {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Button {
+    border-radius: 0;
+  }
+  .Input {
+    border-radius: 0;
+  }
+}

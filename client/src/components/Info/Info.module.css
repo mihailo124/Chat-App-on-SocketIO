@@ -1,0 +1,110 @@
+.Info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #59bd95;
+  border-radius: 8px 8px 0 0;
+  height: 60px;
+  width: 100%;
+}
+
+.Left {
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+  color: white;
+}
+
+.Right {
+  display: flex;
+  flex: 0.5;
+  justify-content: flex-end;
+  margin-right: 5%;
+}
+
+.Online {
+  font-size: 1.4rem;
+  margin: 0 5%;
+}
+
+.Copy {
+  margin-left: 8%;
+  transition: 100ms ease-in-out;
+  cursor: pointer;
+}
+
+.Copy:active,
+.ShowUsers:active {
+  transform: scale(0.7);
+}
+
+.Close {
+  margin-right: 5%;
+}
+
+.Close {
+  transition: 300ms;
+  cursor: pointer;
+  opacity: 0.7;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+}
+
+.Close:hover {
+  transform: rotate(-90deg) scale(1.1);
+  opacity: 1;
+}
+
+.Popup {
+  white-space: nowrap;
+  margin-left: 10px;
+  animation: fadeOut 1s forwards;
+  animation-delay: 5s;
+}
+
+.ShowUsers {
+  align-items: center;
+  margin-right: 15%;
+  padding-top: 4px;
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .ShowUsers {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .ShowUsers,
+  .Close {
+    animation: cssAnimation 1s 5.3s forwards;
+    opacity: 0;
+  }
+}
+@media (max-width: 480px) {
+  .Info {
+    border-radius: 0;
+  }
+}
+@keyframes cssAnimation {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(30%, 0, 0);
+    transform: translate3d(30%, 0, 0);
+  }
+}

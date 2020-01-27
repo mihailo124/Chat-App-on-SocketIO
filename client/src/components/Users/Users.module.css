@@ -1,0 +1,39 @@
+.Outer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  color: white;
+  height: 60%;
+  justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+    .Outer {
+        margin-left: 7vh;
+    }
+}
+
+.ActiveContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50%;
+}
+
+.ActiveItem {
+  display: flex;
+  align-items: center;
+}
+
+.ActiveContainer img {
+  padding-left: 10px;
+}
+
+.Outer h1 {
+  margin-bottom: 0px;
+}
+
+@media (max-width: 600px) {
+  .Outer {
+    display: none;
+  }
+}

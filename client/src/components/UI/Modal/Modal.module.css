@@ -1,0 +1,55 @@
+.Modal {
+  position: absolute;
+  z-index: 500;
+  background-color: white;
+  width: 200px;
+  border: 1px solid #ccc;
+  box-shadow: 0 10px 6px -6px #676767;
+  padding: 16px;
+  left: calc(50vw - 100px);
+  top: 30%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  transition: all 0.3s ease-out;
+  text-align: center;
+}
+
+.Modal h3 {
+  color: black;
+  font-size: 1.3rem;
+}
+
+.User {
+  padding-right: 5px;
+}
+
+.Button {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.Button button {
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: transparent;
+    border: 0;
+}
+
+@media (max-width: 350px) {
+  .Modal h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .Modal {
+    width: 500px;
+    left: calc(50% - 250px);
+  }
+
+  .Modal h3 {
+    font-size: 2rem;
+  }
+}
