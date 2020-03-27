@@ -35,7 +35,7 @@ const Join = () => {
     if (event.key === "Enter") {
       console.log(event.key);
       if (name && room) {
-        setRedirect(true); //sets redurect state and applies <Redirect /> compponent
+        setRedirect(true); //sets redirect state and applies <Redirect /> compponent
       }
     }
   };
@@ -44,6 +44,14 @@ const Join = () => {
 
   return (
     <div className={classes.OuterWrapper}>
+      {window.location.search && (
+        <div
+          className={classes.stepBackButton}
+          onClick={() => (window.location.search = "")}
+        >
+          Step back
+        </div>
+      )}
       <div className={classes.InnerWrapper}>
         <h1 className={classes.Header}>Join Chat {roomNumber}</h1>
         <div>

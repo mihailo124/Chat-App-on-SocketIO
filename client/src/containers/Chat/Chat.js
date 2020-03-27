@@ -59,7 +59,8 @@ const Chat = ({ location }) => {
 
   const sendMessage = event => {
     event.preventDefault();
-    if (message) socket.emit("sendMessage", message, () => setMessage(""));
+    if (message && !!message.replace(/\s/g, "").length)
+      socket.emit("sendMessage", message, () => setMessage(""));
   };
 
   const setMessageHandler = event => setMessage(event.target.value);
